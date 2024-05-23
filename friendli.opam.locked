@@ -1,0 +1,159 @@
+opam-version: "2.0"
+name: "friendli"
+version: "~dev"
+synopsis: "A short synopsis"
+description: "A longer description"
+maintainer: "Maintainer Name"
+authors: "Author Name"
+license: "MIT"
+homepage: "https://github.com/username/reponame"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/username/reponame/issues"
+depends: [
+  "actaa" {= "dev"}
+  "alcotest" {= "1.7.0"}
+  "angstrom" {= "0.16.0"}
+  "asn1-combinators" {= "0.2.6"}
+  "astring" {= "0.8.5"}
+  "base" {= "v0.16.3"}
+  "base-bigarray" {= "base"}
+  "base-bytes" {= "base"}
+  "base-domains" {= "base"}
+  "base-nnp" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "base64" {= "3.5.1"}
+  "bigarray-compat" {= "1.1.0"}
+  "bigstringaf" {= "0.9.1"}
+  "bos" {= "0.2.1"}
+  "cmdliner" {= "1.2.0"}
+  "cohttp" {= "6.0.0~alpha2"}
+  "cohttp-eio" {= "6.0.0~alpha2"}
+  "conduit" {= "6.2.2"}
+  "conf-bash" {= "1"}
+  "conf-gmp" {= "4"}
+  "conf-gmp-powm-sec" {= "3"}
+  "conf-libffi" {= "2.0.0"}
+  "conf-libpcre" {= "1"}
+  "conf-pkg-config" {= "3"}
+  "cppo" {= "1.6.9"}
+  "csexp" {= "1.5.2"}
+  "cstruct" {= "6.2.0"}
+  "ctypes" {= "0.22.0"}
+  "ctypes-foreign" {= "0.22.0"}
+  "discord" {= "dev"}
+  "domain-local-await" {= "1.0.1"}
+  "domain-name" {= "0.4.0"}
+  "dotenv" {= "0.0.3"}
+  "dune" {= "3.15.2"}
+  "dune-configurator" {= "3.15.2"}
+  "duration" {= "0.2.1"}
+  "eio" {= "1.0"}
+  "eio_main" {= "1.0"}
+  "eio_posix" {= "1.0"}
+  "eqaf" {= "0.9"}
+  "fmt" {= "0.9.0"}
+  "fpath" {= "0.7.3"}
+  "gmap" {= "0.3.0"}
+  "hkdf" {= "1.0.4"}
+  "hmap" {= "0.8.1"}
+  "http" {= "6.0.0~alpha2"}
+  "integers" {= "0.7.0"}
+  "iomux" {= "0.3"}
+  "ipaddr" {= "5.5.0"}
+  "ipaddr-sexp" {= "5.5.0"}
+  "logs" {= "0.7.0"}
+  "lwt-dllist" {= "1.0.1"}
+  "macaddr" {= "5.5.0"}
+  "mirage-clock" {= "4.2.0"}
+  "mirage-clock-unix" {= "4.2.0"}
+  "mirage-crypto" {= "0.11.3"}
+  "mirage-crypto-ec" {= "0.11.3"}
+  "mirage-crypto-pk" {= "0.11.3"}
+  "mirage-crypto-rng" {= "0.11.3"}
+  "mirage-crypto-rng-eio" {= "0.11.3"}
+  "mtime" {= "2.0.0"}
+  "num" {= "1.5"}
+  "ocaml" {= "5.2.0"}
+  "ocaml-base-compiler" {= "5.2.0"}
+  "ocaml-compiler-libs" {= "v0.17.0"}
+  "ocaml-config" {= "3"}
+  "ocaml-options-vanilla" {= "1"}
+  "ocaml-syntax-shims" {= "1.0.0"}
+  "ocamlbuild" {= "0.14.3"}
+  "ocamlfind" {= "1.9.6"}
+  "ocplib-endian" {= "1.2"}
+  "octavius" {= "1.2.2"}
+  "optint" {= "0.3.0"}
+  "parsexp" {= "v0.16.0"}
+  "pbkdf" {= "1.2.0"}
+  "pcre" {= "7.5.0"}
+  "ppx_derivers" {= "1.2.1"}
+  "ppx_deriving" {= "5.2.1"}
+  "ppx_js_style" {= "v0.16.0"}
+  "ppx_sexp_conv" {= "v0.16.0"}
+  "ppx_yojson_conv" {= "v0.16.0"}
+  "ppx_yojson_conv_lib" {= "v0.16.0"}
+  "ppxlib" {= "0.32.1"}
+  "psq" {= "0.2.1"}
+  "ptime" {= "1.1.0"}
+  "re" {= "1.11.0"}
+  "result" {= "1.5"}
+  "rresult" {= "0.7.0"}
+  "seq" {= "base"}
+  "sexplib" {= "v0.16.0"}
+  "sexplib0" {= "v0.16.0"}
+  "sodium" {= "dev"}
+  "stdio" {= "v0.16.0"}
+  "stdlib-shims" {= "0.3.0"}
+  "stringext" {= "1.6.0"}
+  "thread-table" {= "1.0.0"}
+  "tls" {= "0.17.5"}
+  "tls-eio" {= "0.17.5"}
+  "topkg" {= "1.0.7"}
+  "uri" {= "4.4.0"}
+  "uri-sexp" {= "4.4.0"}
+  "uutf" {= "1.0.3"}
+  "websocket" {= "2.16"}
+  "x509" {= "0.16.5"}
+  "yaml" {= "3.2.0"}
+  "yojson" {= "2.1.2"}
+  "zarith" {= "1.13"}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/username/reponame.git"
+pin-depends: [
+  [
+    "actaa.dev"
+    "git+https://github.com/ushitora-anqou/actaa#7535a7718d846fa5398b47bdc9285ec99632152d"
+  ]
+  [
+    "cohttp.6.0.0~alpha2"
+    "git+https://github.com/mirage/ocaml-cohttp#v6.0.0_beta1"
+  ]
+  [
+    "cohttp-eio.6.0.0~alpha2"
+    "git+https://github.com/mirage/ocaml-cohttp#v6.0.0_beta1"
+  ]
+  [
+    "discord.dev"
+    "git+https://github.com/ushitora-anqou/discordml#36e798418ad98fc1e0ccb8f87b9408cb1d6d597a"
+  ]
+  [
+    "sodium.dev"
+    "git+https://github.com/ahrefs/ocaml-sodium#734eccbb47e7545a459a504188f1da8dc0bd018e"
+  ]
+]

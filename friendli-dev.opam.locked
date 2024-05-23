@@ -1,0 +1,53 @@
+opam-version: "2.0"
+name: "friendli-dev"
+version: "~dev"
+synopsis: "Dev"
+description: "A longer description"
+maintainer: "Maintainer Name"
+authors: "Author Name"
+license: "MIT"
+homepage: "https://github.com/username/reponame"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/username/reponame/issues"
+depends: [
+  "base-bigarray" {= "base"}
+  "base-domains" {= "base"}
+  "base-nnp" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "cppo" {= "1.6.9"}
+  "csexp" {= "1.5.2"}
+  "dot-merlin-reader" {= "4.14-502~preview"}
+  "dune" {= "3.15.2"}
+  "merlin" {= "4.14-502~preview"}
+  "merlin-lib" {= "4.14-502~preview"}
+  "ocaml" {= "5.2.0"}
+  "ocaml-base-compiler" {= "5.2.0"}
+  "ocaml-compiler-libs" {= "v0.17.0"}
+  "ocaml-config" {= "3"}
+  "ocaml-options-vanilla" {= "1"}
+  "ocamlfind" {= "1.9.6"}
+  "ppx_derivers" {= "1.2.1"}
+  "ppx_deriving" {= "5.2.1"}
+  "ppxlib" {= "0.32.1"}
+  "result" {= "1.5"}
+  "seq" {= "base"}
+  "sexplib0" {= "v0.16.0"}
+  "stdlib-shims" {= "0.3.0"}
+  "yojson" {= "2.1.2"}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/username/reponame.git"
