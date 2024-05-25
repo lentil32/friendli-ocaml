@@ -36,9 +36,9 @@ build: [
 ]
 dev-repo: "git+https://github.com/username/reponame.git"
 pin-depends: [
-  ["actaa.dev" "git+https://github.com/ushitora-anqou/actaa#7535a7718d846fa5398b47bdc9285ec99632152d"]
+  [ "actaa.dev" "git+https://github.com/ushitora-anqou/actaa#7535a7718d846fa5398b47bdc9285ec99632152d" ]
   [ "cohttp.6.0.0~alpha2" "git+https://github.com/mirage/ocaml-cohttp#v6.0.0_beta1" ]
   [ "cohttp-eio.6.0.0~alpha2" "git+https://github.com/mirage/ocaml-cohttp#v6.0.0_beta1" ]
   [ "sodium.dev" "git+https://github.com/ahrefs/ocaml-sodium#734eccbb47e7545a459a504188f1da8dc0bd018e" ]
-  [ "discord.dev" "git+https://github.com/ushitora-anqou/discordml#36e798418ad98fc1e0ccb8f87b9408cb1d6d597a" ]
+  [ "discord.dev" "git+https://github.com/lentil32/discordml/commit/1e1ef3e2b6fd883a1ac590e0fcf84c7ffb805521" ]
 ]

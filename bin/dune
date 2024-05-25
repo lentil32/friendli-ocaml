@@ -1,0 +1,16 @@
+(executable
+ (package friendli)
+ (public_name bot)
+ (name main)
+ (libraries
+  discord
+  friendli.lib
+  base
+  eio
+  eio.core
+  eio.unix
+  eio_main
+  logs
+  mirage-crypto-rng-eio
+  dotenv)
+ (flags :standard -cclib -lopus))

@@ -1,0 +1,7 @@
+(library
+ (name friendli)
+ (public_name friendli.lib)
+ (preprocess
+  (pps ppx_deriving.make ppx_deriving.show ppx_deriving.enum ppx_yojson_conv))
+ (libraries discord)
+ (flags :standard -cclib))

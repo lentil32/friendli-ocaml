@@ -1,0 +1,22 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_discord_command",
+    "description": "Get the proper discord command",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string",
+          "enum": ["weather", "time"],
+          "description": "Command prefix to be used in Discord"
+        },
+        "message": {
+          "type": "string",
+          "description": "arguments for given command. Expected answer: city(e.g., Boston, LA) for weather, name of the timezone(e.g., Asia/Seoul) for time"
+        }
+      },
+      "required": ["command"]
+    }
+  }
+}
